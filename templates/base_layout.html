@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+
+        <!-- http://getbootstrap.com/docs/5.1/ -->
+
+
+        <!-- https://favicon.io/emoji-favicons/money-bag/ -->
+        <link href="/static/favicon.ico" rel="icon">
+
+        <link rel="stylesheet" href="/static/dist/styles.css">
+        <link rel="stylesheet" href="/static/dist/all.css">
+        <link rel="stylesheet" href="/static/home.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i,700,700i" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.9.5/cdn.js" defer></script>
+        <!-- http://getbootstrap.com/docs/5.1/ -->
+        <script src="https://kit.fontawesome.com/4c536a6bd5.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="/static/script.js" defer></script>
+
+        <title>CS50 MATE OF MATH {% block title %}{% endblock %}</title>
+        <style>
+            .mobile-menu {
+                left: -200%;
+                transition: 0.5s;
+              }
+
+              .mobile-menu.active {
+               left: 0;
+              }
+
+              .mobile-menu ul li ul {
+                display: none;
+              }
+
+               .mobile-menu ul li:hover ul {
+                display: block;
+              }
+        </style>
+    </head>
+
+    <body>
+
+        <header class="h-20 bg-gray-100" x-data="{ isOpenMenu1: false, isOpenMenu2: false }">
+            <div class="mx-auto box-content flex h-16 max-w-7xl items-center justify-between py-1">
+                <div class="flex items-center space-x-2 p-4">
+                  <nav id="navr" class="absolute top-0 mt-16 hidden w-full translate-y-2 items-center pb-3 text-sm font-medium text-gray-500 md:relative md:mt-0 md:flex md:w-auto md:translate-y-0 md:space-x-2 md:bg-transparent md:pb-0">
+                    <a href="/" class="block w-full  px-5 py-3 transition hover:bg-gray-100 md:inline md:w-auto md:rounded md:px-3 md:py-2">Home</a>
+                    <span class="group relative inline-block">
+                      <button x-on:click="isOpenMenu1 = !isOpenMenu1" class="inline-flex items-center rounded py-2 px-4 font-semibold">Calculate 2D Shape</button>
+                      <ul class="absolute pt-1 text-gray-700 group-hover:block" x-show="isOpenMenu1">
+                        <li class=""><a class="whitespace-no-wrap block rounded-t bg-gray-200 py-2 px-4 hover:bg-gray-400" href="/square">Square</a></li>
+                        <li class=""><a class="whitespace-no-wrap block rounded-t bg-gray-200 py-2 px-4 hover:bg-gray-400" href="/rectangle">Rectangle</a></li>
+                        <li class=""><a class="whitespace-no-wrap block rounded-t bg-gray-200 py-2 px-4 hover:bg-gray-400" href="/triangle">Triangle</a></li>
+                        <li class=""><a class="whitespace-no-wrap block rounded-t bg-gray-200 py-2 px-4 hover:bg-gray-400" href="/paralellogram">Paralellogram</a></li>
+                        <li class=""><a class="whitespace-no-wrap block rounded-t bg-gray-200 py-2 px-4 hover:bg-gray-400" href="/kite">Kite</a></li>
+                        <li class=""><a class="whitespace-no-wrap block rounded-t bg-gray-200 py-2 px-4 hover:bg-gray-400" href="/circle">Circle</a></li>
+                        <li class=""><a class="whitespace-no-wrap block rounded-t bg-gray-200 py-2 px-4 hover:bg-gray-400" href="/trapezoid">Trapezoid</a></li>
+                      </ul>
+                    </span>
+                    <span class="group relative inline-block">
+                        <button x-on:click="isOpenMenu2 = !isOpenMenu2" class="inline-flex items-center rounded py-2 px-4 font-semibold">Calculate 3D Shape</button>
+                        <ul class="absolute pt-1 text-gray-700 group-hover:block" x-show="isOpenMenu2">
+                          <li class=""><a class="whitespace-no-wrap block rounded-t bg-gray-200 py-2 px-4 hover:bg-gray-400" href="/spare">Spare</a></li>
+                          <li class=""><a class="whitespace-no-wrap block rounded-t bg-gray-200 py-2 px-4 hover:bg-gray-400" href="/cube">Cube</a></li>
+                          <li class=""><a class="whitespace-no-wrap block rounded-t bg-gray-200 py-2 px-4 hover:bg-gray-400" href="/cylinder">Cylinder</a></li>
+                          <li class=""><a class="whitespace-no-wrap block rounded-t bg-gray-200 py-2 px-4 hover:bg-gray-400" href="/cone">Cone</a></li>
+                          <li class=""><a class="whitespace-no-wrap block rounded-t bg-gray-200 py-2 px-4 hover:bg-gray-400" href="/beam">Cuboids</a></li>
+                        </ul>
+                    </span>
+
+                    <a href="/profile" class="block w-full  px-5 py-3 transition hover:bg-gray-100 md:inline md:w-auto md:rounded md:px-3 md:py-2">Profile</a>
+                    <a href="/logout" class="block w-full  px-5 py-3 transition hover:bg-gray-100 md:inline md:w-auto md:rounded md:px-3 md:py-2">Logout</a>
+
+                  </nav>
+                </div>
+              </div>
+          </header>
+
+
+
+
+        {% if get_flashed_messages() %}
+                <div class="alert alert-primary mb-0 text-center" role="alert">
+                    {{ get_flashed_messages() | join(" ") }}
+                </div>
+        {% endif %}
+
+
+
+        <main class="container-fluid py-5">
+            {% block main %}{% endblock %}
+        </main>
+
+        <footer class="mb-5 small text-center text-muted">
+            Created by Somantri & Ani Nuraeni - CS50 TIM - Final Project
+        </footer>
+        <script>
+            const mobile_icon = document.getElementById('mobile-icon');
+            const mobile_menu = document.getElementById('mobile-menu');
+            const hamburger_icon = document.querySelector("#mobile-icon i");
+
+            function openCloseMenu() {
+              mobile_menu.classList.toggle('block');
+              mobile_menu.classList.toggle('active');
+            }
+
+            function changeIcon(icon) {
+              icon.classList.toggle("fa-xmark");
+            }
+
+            mobile_icon.addEventListener('click', openCloseMenu);
+
+
+        </script>
+        <script src="/static/main.js"></script>
+    </body>
+
+</html>

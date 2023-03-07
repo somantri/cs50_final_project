@@ -1,0 +1,44 @@
+{% extends "main_layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+        <thread>
+            <tr>
+                <th>3-D Figure</th>
+                <th>Volume</th>
+                <th>Surface Are</th>
+            </tr>
+        </thread>
+        <tbody>
+            {% for formula in formulas %}
+            <tr>
+                <td><img src="{{ formula['images'] }}" alt="My Image"></td>
+                <td>{{ formula["volume_perimeter"] }}</td>
+                <td>{{ formula["surface_area"] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <table class="table table-striped">
+        <thread>
+            <tr>
+                <th>2-D Shape</th>
+                <th>Area</th>
+                <th>Perimeter Are</th>
+            </tr>
+        </thread>
+        <tbody>
+            {% for formula2 in formulas2 %}
+            <tr>
+                <td><img src="{{ formula2['images'] }}" alt="My Image"></td>
+                <td>{{ formula2["volume_perimeter"] }}</td>
+                <td>{{ formula2["surface_arear"] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

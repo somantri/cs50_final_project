@@ -1,0 +1,1 @@
+INSERT INTO users (email,password) VALUES ('aninuraeni1280@gmail.com', 'pbkdf2:sha256:260000$t0z9uL1q6MMCt7Ua$ad7dcc8da706a08bb3a2927f0a5b3ded57f4a0bbbf2f7809144b0d7aac00e9cd')

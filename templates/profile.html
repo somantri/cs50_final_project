@@ -1,0 +1,107 @@
+{% extends "base_layout.html" %}
+
+{% block title %}
+Profile
+{% endblock %}
+
+{% block main %}
+<main class="px-4 md:px-12">
+    <!-- about -->
+    <div class="about" id="about">
+        <div class="container">
+            <h3 class="w3l_head">About Us</h3>
+            <p class="w3ls_head_para">A few words about us</p>
+            <div class="w3l-grids-about">
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="col-md-7 w3ls-agile-left">
+                        <div class="col-md-5 w3ls-ab-right">
+                            <div class="agile-about-right-img">
+                                <img class="w-4 max-w-xs" src="/static/foto_me.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="w3ls-agile-left-info">
+                            <h4>Name</h4>
+                            <p>Ani Nuraeni</p>
+                        </div>
+                        <div class="w3ls-agile-left-info">
+                            <h4>Job Title</h4>
+                            <p>Teacher of SMKN 11 Bandung</p>
+                        </div>
+                        <div class="w3ls-agile-left-info">
+                            <h4>Gender</h4>
+                            <p>Female</p>
+                        </div>
+                        <div class="w3ls-agile-left-info">
+                            <h4>Address</h4>
+                            <p>Bandung, Jawa Barat</p>
+                        </div>
+                        <div class="w3ls-agile-left-info">
+                            <h4>Email Address</h4>
+                            <p><a href="mailto:"></a></p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-7 w3ls-agile-left">
+                        <div class="col-md-5 w3ls-ab-right">
+                            <div class="agile-about-right-img">
+                                <img class="w-4 max-w-xs" src="/static/somantri_ab.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="w3ls-agile-left-info">
+                            <h4>Name</h4>
+                            <p>Somantri</p>
+                        </div>
+                        <div class="w3ls-agile-left-info">
+                            <h4>Job Title</h4>
+                            <p>Teacher of SMK YASPIM</p>
+                        </div>
+                        <div class="w3ls-agile-left-info">
+                            <h4>Gender</h4>
+                            <p>Male</p>
+                        </div>
+                        <div class="w3ls-agile-left-info">
+                            <h4>Address</h4>
+                            <p> 10, Pramuka Street, Gegerbitung - Sukabumi</p>
+                        </div>
+                        <div class="w3ls-agile-left-info">
+                            <h4>Email Address</h4>
+                            <p><a href="mailto:somantri@smkyaspim.sch.id">somantri@smkyaspim.sch.id</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!-- //about-bottom -->
+</main>
+<footer class="px-4 md:px-12">
+    <nav class="navbar justify-content-space">
+        <nav class="navbar flex gap-2">
+            <a class="nav-link" href="https://somantri.id/personal" target="_blank">
+                <i class="fab fa-google"></i>
+            </a>
+            <a class="nav-link" href="https://www.instagram.com/somantri88" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a class="nav-link" href="https://www.facebook.com/somantri.trie" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a class="nav-link" href="https://twitter.com/somantri_88" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a class="nav-link" href="https://github.com/somantri" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+        </nav>
+        <nav class="navbar">
+            <div id="copyright">
+                Copyright &#169;
+                <script>document.write(new Date().getFullYear())</script>
+            </div>
+        </nav>
+    </nav>
+</footer>
+</div>
+{% endblock %}

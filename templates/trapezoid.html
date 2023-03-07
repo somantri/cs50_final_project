@@ -1,0 +1,141 @@
+{% extends "base_layout.html" %}
+
+{% block title %}
+    Rectangle
+{% endblock %}
+
+{% block main %}
+<div class="flex flex-1  flex-col md:flex-row lg:flex-row mx-2">
+    <div class="mb-2 border-solid border-grey-light rounded border shadow-sm w-full md:w-1/2 lg:w-1/2">
+        <div class="bg-gray-300 px-2 py-3 border-solid border-gray-400 border-b">
+            Trapezoid Calculator
+        </div>
+        <div class="p-3">
+                <div class="w-full px-3 pb-3">
+                    <label class="block uppercase tracking-wide text-gray-700 text-sm font-normal mb-1" for="grid-last-name">
+                     Upside
+                    </label>
+                    <input class="appearance-none block w-full bg-gray-200 text-grey-darker border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white-500 focus:border-gray-600" type="number" required name="upside" id="upside" placeholder="Ex. 5"  />
+                </div>
+                <div class="w-full px-3 pb-3">
+                    <label class="block uppercase tracking-wide text-gray-700 text-sm font-normal mb-1" for="grid-last-name">
+                    Bottom side
+                    </label>
+                    <input class="appearance-none block w-full bg-gray-200 text-grey-darker border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white-500 focus:border-gray-600" type="number" required name="bottomside" id="bottomside" placeholder="Ex. 5"  />
+                </div>
+                <div class="w-full px-3 pb-3">
+                    <label class="block uppercase tracking-wide text-gray-700 text-sm font-normal mb-1" for="grid-last-name">
+                     Height
+                    </label>
+                    <input class="appearance-none block w-full bg-gray-200 text-grey-darker border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white-500 focus:border-gray-600" type="number" required name="height" id="height"  placeholder="Ex. 5"/>
+                </div>
+                <div class="w-full px-3 pb-3">
+                    <label class="block uppercase tracking-wide text-gray-700 text-sm font-normal mb-1" for="grid-last-name">
+                     AB
+                    </label>
+                    <input class="appearance-none block w-full bg-gray-200 text-grey-darker border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white-500 focus:border-gray-600" type="number" required name="ab" id="ab" placeholder="Ex. 5"/>
+                </div>
+                <div class="w-full px-3 pb-3">
+                    <label class="block uppercase tracking-wide text-gray-700 text-sm font-normal mb-1" for="grid-last-name">
+                     BC
+                    </label>
+                    <input class="appearance-none block w-full bg-gray-200 text-grey-darker border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white-500 focus:border-gray-600" type="number" required name="bc" id="bc" placeholder="Ex. 5"/>
+                </div>
+                <div class="w-full px-3 pb-3">
+                    <label class="block uppercase tracking-wide text-gray-700 text-sm font-normal mb-1" for="grid-last-name">
+                     CD
+                    </label>
+                    <input class="appearance-none block w-full bg-gray-200 text-grey-darker border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white-500 focus:border-gray-600" type="number" required name="cd" id="cd" placeholder="Ex. 5"/>
+                </div>
+                <div class="w-full px-3 pb-3">
+                    <label class="block uppercase tracking-wide text-gray-700 text-sm font-normal mb-1" for="grid-last-name">
+                     AD
+                    </label>
+                    <input class="appearance-none block w-full bg-gray-200 text-grey-darker border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white-500 focus:border-gray-600" type="number" required name="ad" id="ad" placeholder="Ex. 5"/>
+                </div>
+                <div class="md:flex px-3 mt-2">
+                    <div class="md:w-2/3">
+                        <button class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" onclick="calculate()">
+                            Submit
+                        </button>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <div class="mb-2 md:mx-2 lg:mx-2 border-solid border-gray-200 rounded border shadow-sm w-full md:w-1/2 lg:w-1/2">
+        <div class="bg-gray-200 px-2 py-3 border-solid border-gray-200 border-b">
+            Result
+        </div>
+        <div class="p-3">
+           <table class="w-full">
+                <tr class="border-b border-b-1 border-teal-500">
+                    <td style="width: 30%;" class="py-2">Upside</td>
+                    <td>: <span id="outputUpside"></span></td>
+                </tr>
+                <tr class="border-b border-b-1 border-teal-500">
+                    <td  class="py-2">Bottom Side</td>
+                    <td>: <span id="outputBottomSide"></span></td>
+                </tr>
+                <tr class="border-b border-b-1 border-teal-500">
+                    <td  class="py-2">Height</td>
+                    <td>: <span id="outputHeight"></span></td>
+                </tr>
+                <tr class="border-b border-b-1 border-teal-500">
+                    <td class="py-2">AB</td>
+                    <td>: <span id="outputAB"></span></td>
+                </tr>
+                <tr class="border-b border-b-1 border-teal-500">
+                    <td class="py-2">BC</td>
+                    <td>: <span id="outputBC"></span></td>
+                </tr>
+                <tr class="border-b border-b-1 border-teal-500">
+                    <td class="py-2">CD</td>
+                    <td>: <span id="outputCD"></span></td>
+                </tr>
+                <tr class="border-b border-b-1 border-teal-500">
+                    <td class="py-2">AD</td>
+                    <td>: <span id="outputAD"></span></td>
+                </tr>
+                <tr class="border-b border-b-1 border-teal-500">
+                    <td class="py-2">Area</td>
+                    <td>: <span id="outputArea"></span></td>
+                </tr>
+                <tr class="border-b border-b-1 border-teal-500">
+                    <td class="py-2">Circumference
+                    </td>
+                    <td>: <span id="outputCircumference"></span></td>
+                </tr>
+           </table>
+        </div>
+    </div>
+</div>
+
+<script>
+    function calculate() {
+        // Get input value from HTML input fields
+        const upside = document.querySelector('#upside').value;
+        const bottomside = document.querySelector('#bottomside').value;
+        const height = document.querySelector('#height').value;
+        const ab = document.querySelector('#ab').value;
+        const bc = document.querySelector('#bc').value;
+        const cd = document.querySelector('#cd').value;
+        const ad = document.querySelector('#ad').value;
+
+        // Calculate area and circumference
+        const area = 0.5 * (parseFloat(upside) + parseFloat(bottomside)) * parseFloat(height);
+        const circumference = parseFloat(ab) + parseFloat(bc) + parseFloat(cd) + parseFloat(ad);
+
+        // Output results to HTML output fields
+        document.querySelector('#outputUpside').textContent = upside;
+        document.querySelector('#outputBottomSide').textContent = bottomside;
+        document.querySelector('#outputHeight').textContent = height;
+        document.querySelector('#outputAB').textContent = ab;
+        document.querySelector('#outputBC').textContent = bc;
+        document.querySelector('#outputCD').textContent = cd;
+        document.querySelector('#outputAD').textContent = ad;
+        document.querySelector('#outputArea').textContent = area;
+        document.querySelector('#outputCircumference').textContent = circumference;
+      }
+</script>
+{% endblock %}

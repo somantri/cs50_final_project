@@ -1,0 +1,9 @@
+{% extends "base_layout.html" %}
+
+{% block title %}
+    Rectangle
+{% endblock %}
+
+{% block main %}
+   
+{% endblock %}

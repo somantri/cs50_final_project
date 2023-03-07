@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+.html {
+    box-sizing: border-box;
+}
+
+
+/*-- //header --*/
+#home {
+    background: url(../images/banner.jpg) no-repeat center top;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+       min-height: 715px;
+    position: relative;
+}
+.banner {
+       margin: 0 auto;
+    text-align: center;
+    padding-top: 6em;
+}
+.banner img {
+       margin: 0 auto;
+    text-align: center;
+    border: 7px solid #44c7f4;
+}
+.banner h2 {
+    font-size: 3.5em;
+    color: #fff;
+    margin: 0em 0;
+    letter-spacing: 6px;
+}
+.banner span {
+    color: #44c7f4;
+	letter-spacing:4px;
+	font-size:0.9em;
+}
+
+.slider-info p {
+    font-size:1em;
+    color: #fff;
+    letter-spacing: 7px;
+    margin: 2em 0;
+}
+
+/*-- /about --*/
+#about,#mail,#gallery {
+    padding: 4em 0;
+}
+.w3ls-agile-left-info {
+    padding: 1em 0;
+    border-bottom: 1px dashed #44c7f4;
+}
+.w3ls-agile-left-info h4, .social-info h4 {
+    font-size: 1.6em;
+    margin: 0;
+    color: #212121;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.w3ls-agile-left-info p {
+    color: #827e7e;
+    font-size: 0.95em;
+}
+.agile-about-right-img img {
+    width: 100%;
+}
+
+h3.w3l_head {
+    text-align: center;
+    color: #111;
+    font-size: 3.5em;
+    letter-spacing: 2px;
+}
+h3.w3l_head.three {
+    color: #44c7f4;
+}
+p.w3ls_head_para {
+    color: #44c7f4;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+}
+.w3l-grids-about {
+    margin-top: 3em;
+}
+.w3ls-agile-left-info a {
+    color: #44c7f4;
+}
+/*-- //about --*/
+
+.flex-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+}
+
+.nav-link {
+    font-weight: 600;
+    color: black;
+    transition: transform 0.2s ease-in-out;
+}
+
+.nav-link.active {
+    color: #dc3545;
+}
+
+.nav-link:hover {
+    color: #dc3545;
+    transform: scale(1.2);
+}
+
+.main-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.typing-container {
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#feature-text {
+    margin-left: 8px;
+}
+
+.input-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 30px;
+    background-color: black;
+    margin-left: 8px;
+    margin-top: 10px;
+    animation: blink .6s linear infinite alternate;
+}
+
+@keyframes blink {
+    0% {opacity: 1;}
+    40% {opacity: 1;}
+    60% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+.btn-danger {
+    color: black;
+    font-weight: bold;
+    border: 1px solid black;
+    transition: transform 0.2s ease-in-out;
+}
+
+.btn-danger:hover {
+    transform: scale(1.1);
+}
+
+.fab {
+    font-size: 20px;
+    color: black;
+}
+
+#copyright {
+    font-size: 18px;
+}
+
+.contact-card-container {
+    display: flex;
+    justify-content: center;
+}.agile-about-right-img img {
+    width: 55%;
+    margin-bottom: 1em;
+}
+
+.contact-card-wrapper {
+    border-radius: 8px;
+    width: 40rem;
+    padding: 50px 50px 20px 50px;
+    background-color: #fefefe;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 8px;
+}
+
+input[type="submit"] {
+    background-color: #dc3545;
+    border: 1px solid gray;
+}
+
+#contact-number {
+    display: flex;
+    justify-content: center;
+}
+
+.about-me {
+    font-size: 1.4rem;
+}
+
+.card {
+    border: 1px solid black;
+    padding: 30px 20px 10px 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    border-radius: 5px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+/*-- /skills --*/
+.skills{
+
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+   min-height: 715px;
+   position: relative;
+  padding-top: 9em;
+}
+
+.skill-agile h4 {
+  font-size: 1.6em;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 2px;
+}
+body .bar_group__bar.thin::before, body .bar_group__bar.thick::before {
+  display: block;
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+body .bar_group__bar.thin::before {
+width: 100%;
+height:17px;
+background: #fff;
+
+}
+.skill-agile {
+   padding: 0 4em;
+  margin-top: 2em;
+}
+body .bar_group__bar.thin {
+  height: 17px;
+  background: #44c7f4;
+  margin-bottom:35px;
+  -webkit-transition: width 2s;
+  transition: width 2s;
+
+}
+.bar_group{
+  position: relative;
+  z-index: 1;
+}
+body .bar_group__bar.thin:last-child {
+  margin-bottom: 0;
+}
+.agileits_skills_grids,.wthree_team_grids{
+  margin: 3em 0 0;
+}
+p.b_label {
+  font-size: .9em;
+  text-transform: uppercase;
+  color:#ffffff;
+   margin-bottom: 1em;
+}
+/*-- //skills --*/
